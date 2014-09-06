@@ -1,0 +1,25 @@
+<section class="work-view">
+    <h1 class="view-title">Portafolio</h1>
+    <h2 class="view-description">
+        Estos son algunos de los últimos proyectos de los que felizmente he sido parte
+        o he desarrollado por mi mismo en mis tiempos libres. <br><small>No puedes llamarte
+        programador si no programas en tus tiempos libres ;)</small>
+    </h2>
+    <section class="projects clearfix">
+        <ul masonry  class="project-items inline-list">
+            <li class="project masonry-brick" ng-repeat="project in projects">
+                <article>
+                    <h1 class="brand">{{ project.brand }}</h1>
+                    <h2 class="occupation">{{ project.occupation }}</h2>
+                    <a target="_blank" class="project-url" ng-if="project.url" href="{{ project.url }}"> {{ project.url }}</a>
+                    <ul class="inline-list skill-items">
+                        <li class="skill clearfix" ng-repeat="language in project.languages">
+                            {{ language }}
+                        </li>
+                    </ul>
+                </article>
+
+            </li>
+        </ul>
+    </section>
+</work>

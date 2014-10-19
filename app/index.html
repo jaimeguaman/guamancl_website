@@ -19,12 +19,12 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body class="cover-4">
+  <body jg-random-background="{ posibilities: 4, cssClassName:'cover-' }">
         <header class="base-header">
             <h1 class="name">Jaime Guaman</h1>
             <h2 class="occupation">Front End Developer</h2>
             <ul class="inline-list social-btns">
-                <li>
+                <li >
                     <a target="_blank" href="https://twitter.com/jaimeg90"><i class="fa fa-twitter-square"></i></a>
                 </li>
                 <li>
@@ -40,10 +40,10 @@
             <nav class="main-navigation" ng-controller="NavigationController">
                 <ul class="clearfix">
                     <li>
-                        <a href="#/me" ng-class="{active: $route.current.activeTab == 'me'}">Resumen</a>
+                        <a jg-change-background  href="#/me" ng-class="{active: $route.current.activeTab == 'me'}">Resumen</a>
                     </li>
                     <li>
-                        <a href="#/work" ng-class="{active: $route.current.activeTab == 'work'}">Portafolio</a>
+                        <a jg-change-background  href="#/work" ng-class="{active: $route.current.activeTab == 'work'}">Portafolio</a>
                     </li>
 
                 </ul>

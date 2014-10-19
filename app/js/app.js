@@ -46,7 +46,7 @@ app.directive('jgRandomBackground',function(){
 			$scope.getRandomChoice = function(){
 				$scope.backgroundSelected = Math.floor(Math.random() * ( ($scope.options.posibilities + 1 ) - 1)) + 1;
 			};
-			
+
 			$scope.setBackgroundCssClass = function(){
 				$element.removeClass();
 				$element.addClass($scope.options.cssClassName + $scope.backgroundSelected.toString());
@@ -120,6 +120,14 @@ app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 		photoSrc: 'http://guaman.cl/images/setmatch.png',
 		occupation: 'Front End Developer',
 		languages: ['HTML', 'CSS', 'Javascript/jQuery']
+	},
+	{
+		company : 'Webexport',
+		brand: 'Webexport',
+		url : 'http://webexport.cl',
+		photoSrc: 'http://guaman.cl/images/webexport.png',
+		occupation: 'Front End Developer',
+		languages: ['HTML', 'CSS']
 	},
 	{
 		company : 'Consensus SpA',

@@ -38,23 +38,24 @@ app.directive('jgRandomBackground',function(){
 					$scope.getRandomChoice();
 					$scope.setBackgroundCssClass();
 				}				
-			}
+			};
 		},
 		link: function($scope, $element){
 			$scope.backgroundSelected = 1;
 
 			$scope.getRandomChoice = function(){
-				$scope.backgroundSelected = Math.floor(Math.random() * ( ($scope.options.posibilities + 1 ) - 1)) + 1
-			}
+				$scope.backgroundSelected = Math.floor(Math.random() * ( ($scope.options.posibilities + 1 ) - 1)) + 1;
+			};
+			
 			$scope.setBackgroundCssClass = function(){
 				$element.removeClass();
 				$element.addClass($scope.options.cssClassName + $scope.backgroundSelected.toString());
-			}
+			};
 
 			$scope.getRandomChoice();
 			$scope.setBackgroundCssClass();
 		}
-	}
+	};
 });
 
 //change background image on click
@@ -65,9 +66,9 @@ app.directive('jgChangeBackground',function(){
 		link: function($scope, $element, $attrs, $controller){
 			$element.bind('click',function(){
 				$controller.changeBackground();
-			})
+			});
 		}
-	}
+	};
 });
 
 //Navigation Controller

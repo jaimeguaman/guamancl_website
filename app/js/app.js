@@ -4,27 +4,72 @@ var app=angular.module('guamancl',
 	['ngTouch', 'ngRoute' , 'wu.masonry'])
 	.config(['$routeProvider', 
 		function($routeProvider) {
-	
-		$routeProvider.when('/me', {
-			templateUrl: 'views/me.html',
-			activeTab:'me',
-			controller: 'MeController'
-		});
-		$routeProvider.when('/work', {
-			templateUrl: 'views/work.html',
-			controller: 'WorkController',
-			activeTab:'work'
-		});
-		$routeProvider.when('/social-networks', {
-			templateUrl: 'views/social-network.html',
-			activeTab:'social-networks'
-		});
-		$routeProvider.when('/blog', {
-			templateUrl: 'views/blog.html',
-			activeTab:'blog'
-		});
-		$routeProvider.otherwise({redirectTo: '/me'});
+			$routeProvider.when('/me', {
+				templateUrl: 'views/me.html',
+				activeTab:'me',
+				controller: 'MeController'
+			});
+			$routeProvider.when('/work', {
+				templateUrl: 'views/work.html',
+				controller: 'WorkController',
+				activeTab:'work'
+			});
+			$routeProvider.when('/social-networks', {
+				templateUrl: 'views/social-network.html',
+				activeTab:'social-networks'
+			});
+			$routeProvider.when('/blog', {
+				templateUrl: 'views/blog.html',
+				activeTab:'blog'
+			});
+			$routeProvider.otherwise({redirectTo: '/me'});
 	}]);
+
+//random background image
+app.directive('jgRandomBackground',function(){
+	return {
+		restrict:'AC',
+		scope:{
+			options: '=jgRandomBackground'
+		},
+		controller: function($scope){
+			this.changeBackground = function(){
+				if ($scope.getRandomChoice && $scope.setBackgroundCssClass){
+					$scope.getRandomChoice();
+					$scope.setBackgroundCssClass();
+				}				
+			};
+		},
+		link: function($scope, $element){
+			$scope.backgroundSelected = 1;
+
+			$scope.getRandomChoice = function(){
+				$scope.backgroundSelected = Math.floor(Math.random() * ( ($scope.options.posibilities + 1 ) - 1)) + 1;
+			};
+
+			$scope.setBackgroundCssClass = function(){
+				$element.removeClass();
+				$element.addClass($scope.options.cssClassName + $scope.backgroundSelected.toString());
+			};
+
+			$scope.getRandomChoice();
+			$scope.setBackgroundCssClass();
+		}
+	};
+});
+
+//change background image on click
+app.directive('jgChangeBackground',function(){
+	return {
+		restrict:'AC',
+		require: '^jgRandomBackground',
+		link: function($scope, $element, $attrs, $controller){
+			$element.bind('click',function(){
+				$controller.changeBackground();
+			});
+		}
+	};
+});
 
 //Navigation Controller
 app.controller('NavigationController',['$rootScope','$scope', '$route', function( $rootScope, $scope, $route){
@@ -46,7 +91,6 @@ app.controller('MeController', [ '$http', '$scope', function( $http, $scope){
 			}
 		}
 	});
-
 }]);
 
 //Work Controller
@@ -76,6 +120,14 @@ app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 		photoSrc: 'http://guaman.cl/images/setmatch.png',
 		occupation: 'Front End Developer',
 		languages: ['HTML', 'CSS', 'Javascript/jQuery']
+	},
+	{
+		company : 'Webexport',
+		brand: 'Webexport',
+		url : 'http://webexport.cl',
+		photoSrc: 'http://guaman.cl/images/webexport.png',
+		occupation: 'Front End Developer',
+		languages: ['HTML', 'CSS']
 	},
 	{
 		company : 'Consensus SpA',

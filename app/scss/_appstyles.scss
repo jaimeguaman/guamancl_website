@@ -1,153 +1,128 @@
-@import url("//fonts.googleapis.com/css?family=Cinzel:400,700");
+@import url("//fonts.googleapis.com/css?family=Philosopher:400,700");
 @import url("//fonts.googleapis.com/css?family=Roboto:400,300,500,700");
+
+$main-background: #1a1a1a;
+$main-forecolor: #f1f1f1;
+
 body{
-    background-color:scale-color(#4c4240,$lightness:95);
-}
-.top-header{
-    background: #4c4240; /* Old browsers */
-    background: url('../images/top-header-bkg.jpg'), -moz-linear-gradient(left,  #4c4240 0%, #4c4240 46%, #4c4240 46%, #13120e 53%, #13120e 100%); /* FF3.6+ */
-    background: url('../images/top-header-bkg.jpg'), -webkit-gradient(linear, left top, right top, color-stop(0%,#4c4240), color-stop(46%,#4c4240), color-stop(46%,#4c4240), color-stop(53%,#13120e), color-stop(100%,#13120e)); /* Chrome,Safari4+ */
-    background: url('../images/top-header-bkg.jpg'),  -webkit-linear-gradient(left,  #4c4240 0%,#4c4240 46%,#4c4240 46%,#13120e 53%,#13120e 100%); /* Chrome10+,Safari5.1+ */
-    background: url('../images/top-header-bkg.jpg'), -o-linear-gradient(left,  #4c4240 0%,#4c4240 46%,#4c4240 46%,#13120e 53%,#13120e 100%); /* Opera 11.10+ */
-    background: url('../images/top-header-bkg.jpg'), -ms-linear-gradient(left,  #4c4240 0%,#4c4240 46%,#4c4240 46%,#13120e 53%,#13120e 100%); /* IE10+ */
-    background: url('../images/top-header-bkg.jpg'), linear-gradient(to right,  #4c4240 0%,#4c4240 46%,#4c4240 46%,#13120e 53%,#13120e 100%); /* W3C */
-    background-repeat:no-repeat;
-    background-position:center top;
+    background-color:$main-background;
+    &.cover-1{
+        background-image:url('../images/cover1.jpg'); 
+        background-position:top;     
+    }
+    &.cover-2{
+        background-image:url('../images/cover2.jpg'); 
+        background-position:center;       
+    }
+    &.cover-3{
+        background-image:url('../images/cover3.jpg'); 
+        background-position:right;       
+    }
+    &.cover-4{
+        background-image:url('../images/cover4.jpg'); 
+        background-position:center;       
+    }
     background-attachment:fixed;
+    background-size:cover;
+    color:$main-forecolor;
+}
+.landing{
     position:relative;
     overflow:hidden;
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4240', endColorstr='#13120e',GradientType=1 ); /* IE6-9 */
-    @media screen and (min-width:320px){
-        height:auto;
-        padding-top:233px;
-    }
-    @media screen and (min-width:641px){
-        height:233px;
-        padding-top:0;
-    }
+    height:auto;
+}
+
+.base-header{
+    position:relative;
+    margin-left:rem-calc(40);
+    margin-top:rem-calc(20);
     .name,
     .occupation{
-        color:#f1f1f1;
-        font-family:"Cinzel", Helvetica, Arial;
-        text-shadow:2px 1px 5px rgba(0,0,0,.7);
+        color:$main-forecolor;
+        font-family:"Philosopher", Helvetica, Arial;
+        text-shadow:2px 1px 5px rgba(0,0,0,.2);
         -webkit-transition: all ease .2s;
         -moz-transition: all ease .2s;
         -o-transition: all ease .2s;
         -ms-transition: all ease .2s;
         transition: all ease .2s;
-        display:block !important;
-        @media screen and (min-width:320px){
-            position:relative;
-            background-color:rgba(0,0,0,.4);
-            width:100%;
-            text-align:center;
-            margin:0;
-        }
-        @media screen and (min-width:641px){
-            width:100%;
-            padding:rem-calc(10);
-            margin-top:rem-calc(20);
-        }
-        @media screen and (min-width:1200px){
-            width:auto;
-            background-color:transparent;
-            padding:rem-calc(80) rem-calc(20) rem-calc(20) rem-calc(20);
-            text-align:left;
-        }
+        display:block;
+        line-height:1;
     }
     .name{
-        @media screen and (min-width:320px){
-            font-size:rem-calc(32);
-        }
-        @media screen and (min-width:641px){
-            font-size:rem-calc(50); 
-        }
-    }
-    .occupation{
-        @media screen and (min-width:320px){
-            font-size:rem-calc(20);
-        }
-        @media screen and (min-width:641px){
-            font-size:rem-calc(40); 
-        }
+        font-size:rem-calc(72);
+        font-weight:700;
     }
 }
 
 .main-navigation{
-    background-color:scale-color(#4c4240,$lightness:90);
-    box-shadow:inset 0 5px 10px rgba(0,0,0,.1);
     height:auto;
-    border-top:1px solid scale-color(#4c4240,$lightness:70);
-    border-bottom:1px solid scale-color(#4c4240,$lightness:80);
+    height:100%;
     ul{
-        @media screen and (min-width:320px){
-            margin:0;
-            display:block;
-        }
-        @media screen and (min-width:768px){
-            display:table;
-            margin:0 auto
-        }
+        list-style:none;
+        margin:0;
         li{
-            @media screen and (min-width:320px){
-                width:100%;
-                display:block;
-                float:left;
-                margin-left:0;
-            }
-            @media screen and (min-width:768px){
-                width:auto;
-                display:block;
-            }
+            height:auto;
+            width:auto;
+            float:left;
             a{
-                @media screen and (min-width:320px){
-                    padding:rem-calc(10) rem-calc(20);
-                }
-                @media screen and (min-width:768px){
-                    padding:rem-calc(10) rem-calc(40);
-                }
-
-                font-family:"Roboto",Arial;
-                -webkit-tap-highlight-color:transparent;
+                font-family:"Philosopher", Helvetica, Arial;
                 display:block;
-                color:#4c4240;
-                font-weight:400;
-                font-size:rem-calc(20);
+                margin-right:rem-calc(20);
+                color:rgba($main-forecolor,.3);
+                font-size:rem-calc(24);
+                text-align:center;
+                border-radius:2px;
+                border:1px solid rgba($main-forecolor,.3);
+                padding:0 rem-calc(10);
                 -webkit-transition: all ease .5s;
                 -moz-transition: all ease .5s;
                 -o-transition: all ease .5s;
                 -ms-transition: all ease .5s;
                 transition: all ease .5s;
-                border-bottom:3px solid transparent;
+                &:hover,
                 &.active{
-                    box-shadow:inset 0 5px 10px rgba(0,0,0,.2);
-                    background-color:scale-color(#4c4240,$lightness:-10);
-                    @media screen and (min-width:768px){
-                        border-bottom:3px solid transparent;
-                    }
-                }
-                &.active{
-                    background-color:scale-color(#4c4240,$lightness:-15);
-                    color:scale-color(#4c4240,$lightness:98);
-                    @media screen and (min-width:768px){
-                        color:#4c4240;
-                        background-color:transparent;
-                        border-bottom:3px solid scale-color(#4c4240,$lightness:-15);
-                    }
+                    color:$main-forecolor;
+                    border-color:$main-forecolor; 
                 }
             }
+
+        }
+    }
+}
+
+.social-btns{
+    font-size:rem-calc(20);
+    margin-left:0;
+    li{
+        margin-right:rem-calc(20);
+        margin-left:0;
+    }
+    a{
+        color:rgba($main-forecolor,.5);
+        &:hover,{
+            color:$main-forecolor;
         }
     }
 }
 
 .view-content{
-    padding:rem-calc(30);
+    padding:rem-calc(60) rem-calc(40);
+    width:100%;
+    background: -moz-linear-gradient(top,  rgba(26,26,26,0) 0%, rgba(26,26,26,0.7) 17%, rgba(26,26,26,0.7) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(26,26,26,0)), color-stop(17%,rgba(26,26,26,0.7)), color-stop(100%,rgba(26,26,26,0.7))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(26,26,26,0) 0%,rgba(26,26,26,0.7) 17%,rgba(26,26,26,0.7) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(26,26,26,0) 0%,rgba(26,26,26,0.7) 17%,rgba(26,26,26,0.7) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(26,26,26,0) 0%,rgba(26,26,26,0.7) 17%,rgba(26,26,26,0.7) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(26,26,26,0) 0%,rgba(26,26,26,0.7) 17%,rgba(26,26,26,0.7) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001a1a1a', endColorstr='#b31a1a1a',GradientType=0 ); /* IE6-9 */
+
     .view-title,
     .view-description{
-        color:#4c4240;
+        color:$main-forecolor;
     }
     .view-title{
-        font-family:"Cinzel", Helvetica, Arial;
+        font-family:"Philosopher", Helvetica, Arial;
         font-weight:300;
         text-align:left;
     }
@@ -164,15 +139,13 @@ body{
 }
 
 .skill-items{
-        font-size:rem-calc(18);
         margin:0;
-        @media screen and (min-width:768px){
-            width:70%;
-        }
+        font-size:rem-calc(18);
         .skill{
+            margin-left:rem-calc(20);
             margin-top:rem-calc(10);
-            background-color:#4c4240;
-            color:white;
+            background-color:rgba($main-background,.7);
+            color:$main-forecolor;
             padding:rem-calc(2) rem-calc(10);
             border-radius:3px;
         }
@@ -183,9 +156,8 @@ body{
     .project{
         margin:rem-calc(20) 0;
         padding:rem-calc(10);
-        border:1px solid #ddd8d7;
         border-radius:3px;
-        background-color:#eeebeb;
+        background-color:rgba($main-background,.5);
         @media screen and (min-width: 320px){
             width:100%;
         }
@@ -195,16 +167,17 @@ body{
         }
         .brand{
             margin:0;
-            font-family:"Cinzel", Helvetica, Arial;
+            font-family:"Philosopher", Helvetica, Arial;
             font-weight:500;
             font-size:rem-calc(32);
-            color:#4c4240;
+            color:$main-forecolor;
         }
         .occupation{
             margin:0;
             font-size:rem-calc(20);
             font-family:"Roboto",  Arial;
             font-weight:300;
+            color:$main-forecolor;
         }
         .project-url{
             display:block;
@@ -225,9 +198,16 @@ body{
 
 .me-view{
     .skills{
+        @media screen and (min-width: 320px){
+            width:100%;
+        }
+        @media screen and (min-width: 768px){
+            width:70%;
+        }
         margin-top:rem-calc(30);
         .skill-items{
             margin-top:rem-calc(10);
+            margin-left: - rem-calc(20);
         }
     }
 }
@@ -246,3 +226,4 @@ body{
         margin-top:rem-calc(30);
     }
 }
+

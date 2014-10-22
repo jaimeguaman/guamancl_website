@@ -1,4 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Cinzel:400,700");
+@import url("//fonts.googleapis.com/css?family=Philosopher:400,700");
 @import url("//fonts.googleapis.com/css?family=Roboto:400,300,500,700");
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
@@ -1994,143 +1994,108 @@ th.hide-for-touch {
     display: table-cell !important; } }
 
 body {
-  background-color: #f7f5f5; }
-
-.top-header {
-  background: #4c4240;
-  /* Old browsers */
-  background: url('../images/top-header-bkg.jpg'), -moz-linear-gradient(left, #4c4240 0%, #4c4240 46%, #4c4240 46%, #13120e 53%, #13120e 100%);
-  /* FF3.6+ */
-  background: url('../images/top-header-bkg.jpg'), -webkit-gradient(linear, left top, right top, color-stop(0%, #4c4240), color-stop(46%, #4c4240), color-stop(46%, #4c4240), color-stop(53%, #13120e), color-stop(100%, #13120e));
-  /* Chrome,Safari4+ */
-  background: url('../images/top-header-bkg.jpg'), -webkit-linear-gradient(left, #4c4240 0%, #4c4240 46%, #4c4240 46%, #13120e 53%, #13120e 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: url('../images/top-header-bkg.jpg'), -o-linear-gradient(left, #4c4240 0%, #4c4240 46%, #4c4240 46%, #13120e 53%, #13120e 100%);
-  /* Opera 11.10+ */
-  background: url('../images/top-header-bkg.jpg'), -ms-linear-gradient(left, #4c4240 0%, #4c4240 46%, #4c4240 46%, #13120e 53%, #13120e 100%);
-  /* IE10+ */
-  background: url('../images/top-header-bkg.jpg'), linear-gradient(to right, #4c4240 0%, #4c4240 46%, #4c4240 46%, #13120e 53%, #13120e 100%);
-  /* W3C */
-  background-repeat: no-repeat;
-  background-position: center top;
+  background-color: #1a1a1a;
   background-attachment: fixed;
+  background-size: cover;
+  color: #f1f1f1; }
+  body.cover-1 {
+    background-image: url('../images/cover1.jpg');
+    background-position: top; }
+  body.cover-2 {
+    background-image: url('../images/cover2.jpg');
+    background-position: center; }
+  body.cover-3 {
+    background-image: url('../images/cover3.jpg');
+    background-position: right; }
+  body.cover-4 {
+    background-image: url('../images/cover4.jpg');
+    background-position: center; }
+
+.landing {
   position: relative;
   overflow: hidden;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4240', endColorstr='#13120e',GradientType=1 );
-  /* IE6-9 */ }
-  @media screen and (min-width: 320px) {
-    .top-header {
-      height: auto;
-      padding-top: 233px; } }
-  @media screen and (min-width: 641px) {
-    .top-header {
-      height: 233px;
-      padding-top: 0; } }
-  .top-header .name, .top-header .occupation {
+  height: auto; }
+
+.base-header {
+  position: relative;
+  margin-left: 2.5rem;
+  margin-top: 1.25rem; }
+  .base-header .name, .base-header .occupation {
     color: #f1f1f1;
-    font-family: "Cinzel", Helvetica, Arial;
-    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.7);
+    font-family: "Philosopher", Helvetica, Arial;
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.2);
     -webkit-transition: all ease 0.2s;
     -moz-transition: all ease 0.2s;
     -o-transition: all ease 0.2s;
     -ms-transition: all ease 0.2s;
     transition: all ease 0.2s;
-    display: block !important; }
-    @media screen and (min-width: 320px) {
-      .top-header .name, .top-header .occupation {
-        position: relative;
-        background-color: rgba(0, 0, 0, 0.4);
-        width: 100%;
-        text-align: center;
-        margin: 0; } }
-    @media screen and (min-width: 641px) {
-      .top-header .name, .top-header .occupation {
-        width: 100%;
-        padding: 0.625rem;
-        margin-top: 1.25rem; } }
-    @media screen and (min-width: 1200px) {
-      .top-header .name, .top-header .occupation {
-        width: auto;
-        background-color: transparent;
-        padding: 5rem 1.25rem 1.25rem 1.25rem;
-        text-align: left; } }
-  @media screen and (min-width: 320px) {
-    .top-header .name {
-      font-size: 2rem; } }
-  @media screen and (min-width: 641px) {
-    .top-header .name {
-      font-size: 3.125rem; } }
-  @media screen and (min-width: 320px) {
-    .top-header .occupation {
-      font-size: 1.25rem; } }
-  @media screen and (min-width: 641px) {
-    .top-header .occupation {
-      font-size: 2.5rem; } }
+    display: block;
+    line-height: 1; }
+  .base-header .name {
+    font-size: 4.5rem;
+    font-weight: 700; }
 
 .main-navigation {
-  background-color: #eeebeb;
-  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1);
   height: auto;
-  border-top: 1px solid #ccc4c3;
-  border-bottom: 1px solid #ddd8d7; }
-  @media screen and (min-width: 320px) {
-    .main-navigation ul {
-      margin: 0;
-      display: block; } }
-  @media screen and (min-width: 768px) {
-    .main-navigation ul {
-      display: table;
-      margin: 0 auto; } }
-  @media screen and (min-width: 320px) {
+  height: 100%; }
+  .main-navigation ul {
+    list-style: none;
+    margin: 0; }
     .main-navigation ul li {
-      width: 100%;
-      display: block;
-      float: left;
-      margin-left: 0; } }
-  @media screen and (min-width: 768px) {
-    .main-navigation ul li {
+      height: auto;
       width: auto;
-      display: block; } }
-  .main-navigation ul li a {
-    font-family: "Roboto", Arial;
-    -webkit-tap-highlight-color: transparent;
-    display: block;
-    color: #4c4240;
-    font-weight: 400;
-    font-size: 1.25rem;
-    -webkit-transition: all ease 0.5s;
-    -moz-transition: all ease 0.5s;
-    -o-transition: all ease 0.5s;
-    -ms-transition: all ease 0.5s;
-    transition: all ease 0.5s;
-    border-bottom: 3px solid transparent; }
-    @media screen and (min-width: 320px) {
+      float: left; }
       .main-navigation ul li a {
-        padding: 0.625rem 1.25rem; } }
-    @media screen and (min-width: 768px) {
-      .main-navigation ul li a {
-        padding: 0.625rem 2.5rem; } }
-    .main-navigation ul li a.active {
-      box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2);
-      background-color: #443b3a; }
-      @media screen and (min-width: 768px) {
-        .main-navigation ul li a.active {
-          border-bottom: 3px solid transparent; } }
-    .main-navigation ul li a.active {
-      background-color: #413836;
-      color: #fcfbfb; }
-      @media screen and (min-width: 768px) {
-        .main-navigation ul li a.active {
-          color: #4c4240;
-          background-color: transparent;
-          border-bottom: 3px solid #413836; } }
+        font-family: "Philosopher", Helvetica, Arial;
+        display: block;
+        margin-right: 1.25rem;
+        color: rgba(241, 241, 241, 0.3);
+        font-size: 1.5rem;
+        text-align: center;
+        border-radius: 2px;
+        border: 1px solid rgba(241, 241, 241, 0.3);
+        padding: 0 0.625rem;
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+        -ms-transition: all ease 0.5s;
+        transition: all ease 0.5s; }
+        .main-navigation ul li a:hover, .main-navigation ul li a.active {
+          color: #f1f1f1;
+          border-color: #f1f1f1; }
+
+.social-btns {
+  font-size: 1.25rem;
+  margin-left: 0; }
+  .social-btns li {
+    margin-right: 1.25rem;
+    margin-left: 0; }
+  .social-btns a {
+    color: rgba(241, 241, 241, 0.5); }
+    .social-btns a:hover {
+      color: #f1f1f1; }
 
 .view-content {
-  padding: 1.875rem; }
+  padding: 3.75rem 2.5rem;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 0.7) 17%, rgba(26, 26, 26, 0.7) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(26, 26, 26, 0)), color-stop(17%, rgba(26, 26, 26, 0.7)), color-stop(100%, rgba(26, 26, 26, 0.7)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 0.7) 17%, rgba(26, 26, 26, 0.7) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 0.7) 17%, rgba(26, 26, 26, 0.7) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 0.7) 17%, rgba(26, 26, 26, 0.7) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, 0.7) 17%, rgba(26, 26, 26, 0.7) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001a1a1a', endColorstr='#b31a1a1a',GradientType=0 );
+  /* IE6-9 */ }
   .view-content .view-title, .view-content .view-description {
-    color: #4c4240; }
+    color: #f1f1f1; }
   .view-content .view-title {
-    font-family: "Cinzel", Helvetica, Arial;
+    font-family: "Philosopher", Helvetica, Arial;
     font-weight: 300;
     text-align: left; }
   .view-content .view-description {
@@ -2144,15 +2109,13 @@ body {
         width: 70%; } }
 
 .skill-items {
-  font-size: 1.125rem;
-  margin: 0; }
-  @media screen and (min-width: 768px) {
-    .skill-items {
-      width: 70%; } }
+  margin: 0;
+  font-size: 1.125rem; }
   .skill-items .skill {
+    margin-left: 1.25rem;
     margin-top: 0.625rem;
-    background-color: #4c4240;
-    color: white;
+    background-color: rgba(26, 26, 26, 0.7);
+    color: #f1f1f1;
     padding: 0.125rem 0.625rem;
     border-radius: 3px; }
 
@@ -2161,9 +2124,8 @@ body {
   .project-items .project {
     margin: 1.25rem 0;
     padding: 0.625rem;
-    border: 1px solid #ddd8d7;
     border-radius: 3px;
-    background-color: #eeebeb; }
+    background-color: rgba(26, 26, 26, 0.5); }
     @media screen and (min-width: 320px) {
       .project-items .project {
         width: 100%; } }
@@ -2173,15 +2135,16 @@ body {
         margin-right: 1.25rem; } }
     .project-items .project .brand {
       margin: 0;
-      font-family: "Cinzel", Helvetica, Arial;
+      font-family: "Philosopher", Helvetica, Arial;
       font-weight: 500;
       font-size: 2rem;
-      color: #4c4240; }
+      color: #f1f1f1; }
     .project-items .project .occupation {
       margin: 0;
       font-size: 1.25rem;
       font-family: "Roboto", Arial;
-      font-weight: 300; }
+      font-weight: 300;
+      color: #f1f1f1; }
     .project-items .project .project-url {
       display: block;
       overflow: hidden;
@@ -2195,8 +2158,15 @@ body {
 
 .me-view .skills {
   margin-top: 1.875rem; }
+  @media screen and (min-width: 320px) {
+    .me-view .skills {
+      width: 100%; } }
+  @media screen and (min-width: 768px) {
+    .me-view .skills {
+      width: 70%; } }
   .me-view .skills .skill-items {
-    margin-top: 0.625rem; }
+    margin-top: 0.625rem;
+    margin-left: -1.25rem; }
 
 .work-view .projects {
   margin-top: 0.625rem; }

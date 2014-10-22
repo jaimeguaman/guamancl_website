@@ -7,7 +7,7 @@
     <title>Jaime Guaman. Front-End Developer</title>
 
     <!-- build:css css/libraries.min.css -->
-    <!--<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">-->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
@@ -15,34 +15,40 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/app_override.css">
     <!-- endbuild -->
-    <!-- build:js js/vendor/modernizr.min.js -->
-    <script src="bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
   </head>
-  <body>
-    <header class="top-header">
-        <h1 class="name left">Jaime Guaman</h1>
-        <h2 class="occupation right">Front End Developer</h2>
-    </header>
-    <nav class="main-navigation" ng-controller="NavigationController">
-        <ul class="inline-list">
-            <li>
-                <a href="#/me" ng-class="{active: $route.current.activeTab == 'me'}">Yo</a>
-            </li>
-            <li>
-                <a href="#/work" ng-class="{active: $route.current.activeTab == 'work'}">Portafolio</a>
-            </li>
-            <li>
-                <a href="#/social-networks" ng-class="{active: $route.current.activeTab == 'social-networks'}">Redes Sociales</a>
-            </li>
-            <li>
-                <a href="#/blog" ng-class="{active: $route.current.activeTab == 'blog'}">Blog</a>
-            </li>
-        </ul>
-    </nav>
-    <section class="view-content" ng-view>
-        
-    </section>
+  <body jg-random-background="{ posibilities: 4, cssClassName:'cover-' }">
+        <header class="base-header">
+            <h1 class="name">Jaime Guaman</h1>
+            <h2 class="occupation">Front End Developer</h2>
+            <ul class="inline-list social-btns">
+                <li >
+                    <a target="_blank" href="https://twitter.com/jaimeg90"><i class="fa fa-twitter-square"></i></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://github.com/jaimeguaman"><i class="fa fa-github-alt"></i></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/profile/view?id=88007163"><i class="fa fa-linkedin-square"></i></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://plus.google.com/u/0/+JaimeGuaman_js"><i class="fa fa-google-plus-square"></i></a>
+                </li>
+            </ul>
+            <nav class="main-navigation" ng-controller="NavigationController">
+                <ul class="clearfix">
+                    <li>
+                        <a jg-change-background  href="#/me" ng-class="{active: $route.current.activeTab == 'me'}">Resumen</a>
+                    </li>
+                    <li>
+                        <a jg-change-background  href="#/work" ng-class="{active: $route.current.activeTab == 'work'}">Portafolio</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </header>
+        <section class="view-content" ng-view>
+            
+        </section>
 
 
     <!-- build:js js/vendor/libraries.min.js -->
@@ -62,15 +68,8 @@
     <script src="bower_components/outlayer/item.js"></script>
     <script src="bower_components/outlayer/outlayer.js"></script>
     <script src="bower_components/masonry/masonry.js"></script>
-    <script src="bower_components/isotope/js/item.js"></script>
-    <script src="bower_components/isotope/js/layout-mode.js"></script>
-    <script src="bower_components/isotope/js/isotope.js"></script>
-    <script src="bower_components/isotope/js/layout-modes/vertical.js"></script>
-    <script src="bower_components/isotope/js/layout-modes/fit-rows.js"></script>
-    <script src="bower_components/isotope/js/layout-modes/masonry.js"></script>
-    <script src="bower_components/angular-isotope/dist/angular-isotope.js"></script>
-    <script src="bower_components/angular-masonry/angular-masonry.js"></script>
     <script src="bower_components/imagesloaded/imagesloaded.js"></script>
+    <script src="bower_components/angular-masonry/angular-masonry.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/app.min.js -->

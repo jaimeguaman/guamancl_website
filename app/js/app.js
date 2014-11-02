@@ -98,6 +98,14 @@ app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 
 	$scope.projects = [
 	{
+		company : 'Hewlett-Packard Chile',
+		brand: 'HP Chile',
+		url : 'http://hpamd.com',
+		photoSrc: 'http://guaman.cl/images/hpamd.png',
+		occupation: 'Front End Developer',
+		languages: ['HTML', 'CSS', 'Javascript/jQuery']
+	},
+	{
 		company : 'Sinbad SpA',
 		brand: 'Sinbad Travel',
 		url : 'http://cl.sinbad.travel',

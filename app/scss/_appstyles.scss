@@ -165,13 +165,6 @@ body{
             width:280px;
             margin-right:rem-calc(20);
         }
-        .brand{
-            margin:0;
-            font-family:"Philosopher", Helvetica, Arial;
-            font-weight:500;
-            font-size:rem-calc(32);
-            color:$main-forecolor;
-        }
         .occupation{
             margin:0;
             font-size:rem-calc(20);
@@ -184,6 +177,38 @@ body{
             overflow:hidden;
             white-space:nowrap;
             text-overflow:ellipsis;
+            background-color: rgba(#1DE9B6,.2);
+            /* border: 1px solid black; */
+            border-radius: 3px;
+            color: #f1f1f1;
+            padding: 8px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-top: 10px;
+            font-weight: 500;
+            &:hover{
+                background-color: rgba(#1DE9B6,.5);
+            }
+        }
+        .project-logo{
+            min-height:33px;
+            max-height: 40px;
+            margin: 0 auto;
+            display: block;
+        }
+        .project-brand{
+            margin:rem-calc(20) 0;
+            font-size:rem-calc(16);
+            padding:5px;
+            border-bottom:1px dashed rgba($main-forecolor,.2);
+            border-top:1px dashed rgba($main-forecolor,.2);
+            color:$main-forecolor;
+            font-weight:300;
+            text-align:center;
+        }
+        .project-description{
+            line-height:1.2;
+            color:#ddd;
         }
         .skill-items{
             .skill{

@@ -98,18 +98,54 @@ app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 
 	$scope.projects = [
 	{
-		company : 'Hewlett-Packard Chile',
-		brand: 'HP Chile',
-		url : 'http://hpamd.com',
-		photoSrc: 'http://guaman.cl/images/hpamd.png',
+		company : 'Finvox',
+		brand: 'Trader Digital (México)',
+		url : 'http://trader.digital',
+		description: 'Administra portafolio virtual de acciones',
+		photoSrc: 'images/traderdigital_logo.png',
 		occupation: 'Front End Developer',
-		languages: ['HTML', 'CSS', 'Javascript/jQuery']
+		languages: ['HTML/Jinja2', 'CSS/SASS', 'Javascript/AngularJS', 'Grunt']
+	},
+	{
+		company : 'Finvox',
+		brand: 'Trader Social (México)',
+		url : 'http://trader.social',
+		description: 'Conéctate con inversionistas y analistas locales e internacionales',
+		photoSrc: 'images/tradersocial_logo.png',
+		occupation: 'Front End Developer',
+		languages: ['HTML/Jinja2', 'CSS/SASS', 'Javascript/AngularJS', 'Grunt']
+	},
+	{
+		company : 'Finvox',
+		description: 'Los indicadores económicos chilenos en tu navegador.',
+		brand: 'Indicadores Económicos',
+		url : 'http://bit.ly/1pyXGJd',
+		photoSrc: 'images/finvox_logo.png',
+		occupation: 'Front End Developer',
+		languages: ['HTML', 'CSS', 'Javascript/jQuery', 'Chrome Extension']
+	},
+	{
+		company : 'Hewlett-Packard Chile',
+		brand: 'Hewlett-Packard',
+		description: 'Landing campaña #HPAMD',
+		url : 'http://hpamd.com',
+		photoSrc: 'images/hpamd_logo.png',
+		occupation: 'Front End Developer',
+		languages: ['HTML', 'CSS/SASS', 'Javascript/jQuery', 'Grunt']
+	},
+	{
+		company : 'Finvox',
+		brand: 'Sitio Corporativo',
+		url : 'https://finvox.com',
+		photoSrc: 'images/finvox_logo.png',
+		occupation: 'Front End Developer',
+		languages: ['HTML', 'CSS/SASS', 'Javascript/jQuery', 'Grunt']
 	},
 	{
 		company : 'Sinbad SpA',
 		brand: 'Sinbad Travel',
 		url : 'http://cl.sinbad.travel',
-		photoSrc: 'http://guaman.cl/images/sinbad.png',
+		photoSrc: 'images/sinbad_logo.png',
 		occupation: 'Full Stack Developer',
 		languages: ['HTML', 'CSS', 'Javascript/jQuery', 'PHP', 'MySQL']
 	},
@@ -117,7 +153,7 @@ app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 		company : 'Portal del flete SpA',
 		brand: 'Transportalo',
 		url : 'http://transportalo.cl',
-		photoSrc: 'http://guaman.cl/images/transportalo.png',
+		photoSrc: 'images/transportalo_logo.png',
 		occupation: 'Full Stack Developer',
 		languages: ['HTML', 'CSS', 'Javascript/jQuery', 'PHP/Cake', 'MySQL']
 	},
@@ -125,7 +161,7 @@ app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 		company : 'Setmatch S.A',
 		brand: 'Setmatch',
 		url : 'http://guaman.cl/labs/setmatch',
-		photoSrc: 'http://guaman.cl/images/setmatch.png',
+		photoSrc: 'images/setmatch_logo.png',
 		occupation: 'Front End Developer',
 		languages: ['HTML', 'CSS', 'Javascript/jQuery']
 	},
@@ -133,25 +169,9 @@ app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 		company : 'Webexport',
 		brand: 'Webexport',
 		url : 'http://webexport.cl',
-		photoSrc: 'http://guaman.cl/images/webexport.png',
+		photoSrc: 'images/webexport_logo.png',
 		occupation: 'Front End Developer',
-		languages: ['HTML', 'CSS']
-	},
-	{
-		company : 'Consensus SpA',
-		brand: 'eTrader',
-		url : '',
-		photoSrc: '',
-		occupation: 'Front End Developer',
-		languages: ['HTML/Jinja2', 'CSS/SASS', 'Javascript/Angular', 'Grunt']
-	},
-	{
-		company : 'Consensus SpA',
-		brand: 'Indicadores Económicos',
-		url : 'http://bit.ly/1pyXGJd',
-		photoSrc: '',
-		occupation: 'Front End Developer',
-		languages: ['HTML', 'CSS', 'Javascript/jQuery', 'Chrome Extension']
+		languages: ['HTML', 'CSS/SASS', 'Grunt']
 	},
 	{
 		company : 'Side Project',
@@ -213,6 +233,7 @@ app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 		company : 'Side Project',
 		brand: 'Youjizz Downloader [NSFW]',
 		url : 'http://guaman.cl/app/youjizzdownloader',
+		description: 'Vee en pantalla completa y descarga videos de youjizz.com',
 		photoSrc: '',
 		occupation: 'Front End Developer',
 		languages: ['HTML', 'CSS', 'Javascript', 'Chrome Extension']

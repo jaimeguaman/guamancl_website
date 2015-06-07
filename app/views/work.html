@@ -5,17 +5,26 @@
         o he desarrollado por mi mismo en mis tiempos libres.
     </h2>
     <section class="projects clearfix">
-        <ul masonry  class="project-items inline-list">
+        <ul masonry  preserve-order="true" load-images="true" class="project-items inline-list">
             <li class="project masonry-brick" ng-repeat="project in projects">
                 <article>
-                    <h1 class="brand">{{ project.brand }}</h1>
-                    <h2 class="occupation">{{ project.occupation }}</h2>
-                    <a target="_blank" class="project-url" ng-if="project.url" href="{{ project.url }}"> {{ project.url }}</a>
-                    <ul class="inline-list skill-items">
-                        <li class="skill clearfix" ng-repeat="language in project.languages">
-                            {{ language }}
-                        </li>
-                    </ul>
+                    <div ng-if="project.photoSrc">
+                        <img class="project-logo" ng-src="{{project.photoSrc}}" alt="{{project.brand}}">
+                        <h2 class="project-brand">{{project.brand}}</h2>
+                    </div>
+    
+                    <h1 ng-if="!project.photoSrc" class="project-brand">{{ project.brand }}</h1> 
+                    <p ng-if="project.description && project.photoSrc != ''"  class="project-description">
+                        {{project.description}}
+                    </p>
+                    <p>
+                        <ul class="inline-list skill-items">
+                            <li class="skill clearfix" ng-repeat="language in project.languages">
+                                {{language}}
+                            </li>
+                        </ul>
+                    </p>
+                    <a target="_blank" class="project-url" ng-if="project.url" href="{{ project.url }}">Visitar</a>
                 </article>
 
             </li>

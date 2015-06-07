@@ -98,18 +98,19 @@ app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 
 	$scope.projects = [
 	{
-		company : 'Hewlett-Packard Chile',
-		brand: 'Hewlett-Packard',
-		description: 'Landing campaña #HPAMD',
-		url : 'http://hpamd.com',
-		photoSrc: 'images/hpamd_logo.png',
+		company : 'Finvox',
+		brand: 'Trader Digital (México)',
+		url : 'http://trader.digital',
+		description: 'Administra portafolio virtual de acciones',
+		photoSrc: 'images/traderdigital_logo.png',
 		occupation: 'Front End Developer',
-		languages: ['HTML', 'CSS/SASS', 'Javascript/jQuery', 'Grunt']
+		languages: ['HTML/Jinja2', 'CSS/SASS', 'Javascript/AngularJS', 'Grunt']
 	},
 	{
 		company : 'Finvox',
-		brand: 'Trader Social',
+		brand: 'Trader Social (México)',
 		url : 'http://trader.social',
+		description: 'Conéctate con inversionistas y analistas locales e internacionales',
 		photoSrc: 'images/tradersocial_logo.png',
 		occupation: 'Front End Developer',
 		languages: ['HTML/Jinja2', 'CSS/SASS', 'Javascript/AngularJS', 'Grunt']
@@ -124,12 +125,13 @@ app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 		languages: ['HTML', 'CSS', 'Javascript/jQuery', 'Chrome Extension']
 	},
 	{
-		company : 'Portal del flete SpA',
-		brand: 'Transportalo',
-		url : 'http://transportalo.cl',
-		photoSrc: 'images/transportalo_logo.png',
-		occupation: 'Full Stack Developer',
-		languages: ['HTML', 'CSS', 'Javascript/jQuery', 'PHP/Cake', 'MySQL']
+		company : 'Hewlett-Packard Chile',
+		brand: 'Hewlett-Packard',
+		description: 'Landing campaña #HPAMD',
+		url : 'http://hpamd.com',
+		photoSrc: 'images/hpamd_logo.png',
+		occupation: 'Front End Developer',
+		languages: ['HTML', 'CSS/SASS', 'Javascript/jQuery', 'Grunt']
 	},
 	{
 		company : 'Finvox',
@@ -146,6 +148,14 @@ app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 		photoSrc: 'images/sinbad_logo.png',
 		occupation: 'Full Stack Developer',
 		languages: ['HTML', 'CSS', 'Javascript/jQuery', 'PHP', 'MySQL']
+	},
+	{
+		company : 'Portal del flete SpA',
+		brand: 'Transportalo',
+		url : 'http://transportalo.cl',
+		photoSrc: 'images/transportalo_logo.png',
+		occupation: 'Full Stack Developer',
+		languages: ['HTML', 'CSS', 'Javascript/jQuery', 'PHP/Cake', 'MySQL']
 	},
 	{
 		company : 'Setmatch S.A',
@@ -223,6 +233,7 @@ app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 		company : 'Side Project',
 		brand: 'Youjizz Downloader [NSFW]',
 		url : 'http://guaman.cl/app/youjizzdownloader',
+		description: 'Vee en pantalla completa y descarga videos de youjizz.com',
 		photoSrc: '',
 		occupation: 'Front End Developer',
 		languages: ['HTML', 'CSS', 'Javascript', 'Chrome Extension']

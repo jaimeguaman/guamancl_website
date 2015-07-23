@@ -122,7 +122,7 @@ app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 		url : 'http://bit.ly/1pyXGJd',
 		photoSrc: 'images/finvox_logo.png',
 		occupation: 'Front End Developer',
-		languages: ['HTML', 'CSS', 'Javascript/jQuery', 'Chrome Extension']
+		languages: ['HTML', 'CSS/SASS', 'Javascript/AngularJS', 'Grunt', 'Chrome Extension']
 	},
 	{
 		company : 'Hewlett-Packard Chile',

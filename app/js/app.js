@@ -86,7 +86,9 @@ app.controller('MeController', [ '$http', '$scope', function( $http, $scope){
 			var langs = response.data.languages;
 			for (var lang in langs){
 				if (lang !== 'Plain Text'){
-					$scope.skills.push(lang);
+					if (langs[lang].points > 0){
+						$scope.skills.push(lang);
+					}
 				}
 			}
 		}
@@ -97,6 +99,33 @@ app.controller('MeController', [ '$http', '$scope', function( $http, $scope){
 app.controller('WorkController', [ '$http', '$scope', function( $http, $scope){
 
 	$scope.projects = [
+		{
+			company : 'NED Media',
+			brand: 'Fireclip',
+			url : 'http://fireclip.tv',
+			description: 'Captura, edita y viraliza por redes sociales la transmisión televisiva o cualquier streaming en vivo',
+			photoSrc: 'images/fireclip_logo.png',
+			occupation: 'Front End Developer',
+			languages: ['HTML/Jade', 'CSS/Stylus', 'Javascript/AngularJS', 'Grunt', 'Gulp']
+		},
+		{
+			company : 'Adere.so',
+			brand: 'Postcenter',
+			url : 'http://postcenter.io',
+			description: 'Atención de clientes vía redes sociales',
+			photoSrc: 'images/postcenter_logo.png',
+			occupation: 'Front End Developer',
+			languages: ['HTML/HAML', 'CSS/SASS', 'Javascript/AngularJS', 'Grunt']
+		},
+		{
+		company : 'Finvox',
+		brand: 'eTrader (Chile)',
+		url : 'https://etrader.corpbancainversiones.cl',
+		description: 'Conéctate con inversionistas y analistas locales e internacionales',
+		photoSrc: 'images/etrader_logo.png',
+		occupation: 'Front End Developer',
+		languages: ['HTML/HAML', 'CSS/SASS', 'Javascript/AngularJS', 'Grunt']
+	},
 	{
 		company : 'Finvox',
 		brand: 'Trader Digital (México)',

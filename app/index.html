@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/app_override.css">
     <!-- endbuild -->
   </head>
-  <body jg-random-background="{ posibilities: 4, cssClassName:'cover-' }">
+  <body class="cover-2">
         <header class="base-header">
             <h1 class="name">Jaime Guaman</h1>
             <h2 class="occupation">Front End Developer</h2>
@@ -37,10 +37,10 @@
             <nav class="main-navigation" ng-controller="NavigationController">
                 <ul class="clearfix">
                     <li>
-                        <a jg-change-background  href="#/me" ng-class="{active: $route.current.activeTab == 'me'}">Resumen</a>
+                        <a href="#/me" ng-class="{active: $route.current.activeTab == 'me'}">Resumen</a>
                     </li>
                     <li>
-                        <a jg-change-background  href="#/work" ng-class="{active: $route.current.activeTab == 'work'}">Portafolio</a>
+                        <a href="#/work" ng-class="{active: $route.current.activeTab == 'work'}">Portafolio</a>
                     </li>
 
                 </ul>
